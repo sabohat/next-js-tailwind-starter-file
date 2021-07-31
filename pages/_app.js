@@ -12,6 +12,7 @@ import { useStore } from '../store/store'
 import { appWithTranslation } from '../i18n'
 import theme from '../theme'
 
+// Global styles
 const GlobalStyle = createGlobalStyle`
 * {
     box-sizing: border-box;
@@ -19,11 +20,14 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
 }
 `
+
+// NProgress events
 Router.events.on('routeChangeStart', () => NProgress.start())
 Router.events.on('routeChangeComplete', () => {
     NProgress.done()
 })
 Router.events.on('routeChangeError', () => NProgress.done())
+
 function MyApp({ Component, pageProps }) {
     const store = useStore(pageProps.initialReduxState)
     const persistor = persistStore(store)
