@@ -10,7 +10,7 @@ import { useEffect } from 'react'
 import Layout from 'components/layout/Layout'
 import { useStore } from '../store/store'
 import { appWithTranslation } from '../i18n'
-import theme from '../theme.'
+import theme from '../theme'
 
 // Global styles
 const GlobalStyle = createGlobalStyle`
