@@ -11,7 +11,6 @@
         "eslint:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx,mdx}\"",
         "prettier:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx}\"",
         "prepare": "husky install"
-
     },
     "dependencies": {
         "@material-ui/core": "^4.11.4",
