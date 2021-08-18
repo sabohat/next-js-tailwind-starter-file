@@ -16,10 +16,10 @@
     "settings": {
         "import/resolver": {
             "node": {
-              "moduleDirectory": ["node_modules", "."],
-              "extensions": [".js", ".jsx", ".ts", ".tsx"]
+                "moduleDirectory": ["node_modules", "."],
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
             }
-          }
+        }
     },
     "parserOptions": {
         "ecmaFeatures": {
@@ -36,7 +36,10 @@
         "import/prefer-default-export": "off",
         "class-methods-use-this": "off",
         "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "react/jsx-filename-extension": [
+            1,
+            { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+        ],
         "react/state-in-constructor": "off",
         "react/jsx-props-no-spreading": "off",
         "react/prop-types": "off",

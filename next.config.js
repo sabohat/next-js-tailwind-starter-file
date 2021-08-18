@@ -15,4 +15,11 @@ module.exports = withBundleAnalyzer({
         localeSubpaths,
     },
     rewrites: async () => nextI18NextRewrites(localeSubpaths),
+    webpack(config) {
+        config.module.rules.push({
+            test: /\.svg$/,
+            use: ['@svgr/webpack'],
+        })
+        return config
+    },
 })

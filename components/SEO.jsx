@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 export default function SEO({ title, description, image, keywords }) {
-    const projectName = 'E-elektron'
+    const projectName = 'ProjectName'
     return (
         <Head>
             <meta
