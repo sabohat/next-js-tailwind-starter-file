@@ -1,25 +1,15 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import { Provider } from 'react-redux'
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistStore } from 'redux-persist'
-import { StylesProvider } from '@material-ui/core/styles'
 import { useEffect } from 'react'
 import Layout from 'components/layout/Layout'
 import { useStore } from '../store/store'
 import { appWithTranslation } from '../i18n'
-import theme from '../theme'
 
 // Global styles
-const GlobalStyle = createGlobalStyle`
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-`
 
 // NProgress events
 Router.events.on('routeChangeStart', () => NProgress.start())
@@ -43,16 +33,11 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             <Provider store={store}>
-                <StylesProvider injectFirst>
-                    <GlobalStyle />
-                    <ThemeProvider theme={theme}>
-                        <PersistGate loading={null} persistor={persistor}>
-                            <Layout>
-                                <Component {...pageProps} />
-                            </Layout>
-                        </PersistGate>
-                    </ThemeProvider>
-                </StylesProvider>
+                <PersistGate loading={null} persistor={persistor}>
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
+                </PersistGate>
             </Provider>
         </>
     )

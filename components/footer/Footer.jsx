@@ -2,11 +2,7 @@ import React from 'react'
 import { Wrapper } from '../layout/index'
 
 function Footer() {
-    return (
-        <footer>
-            <Wrapper />
-        </footer>
-    )
+    return <footer />
 }
 
 export default Footer
